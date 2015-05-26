@@ -1,0 +1,424 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F50F5EBF1B14DC9300E8D171 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F5EBE1B14DC9300E8D171 /* AppDelegate.swift */; };
+		F50F5EC11B14DC9300E8D171 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F5EC01B14DC9300E8D171 /* ViewController.swift */; };
+		F50F5EC41B14DC9300E8D171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50F5EC21B14DC9300E8D171 /* Main.storyboard */; };
+		F50F5EC61B14DC9300E8D171 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50F5EC51B14DC9300E8D171 /* Images.xcassets */; };
+		F50F5EC91B14DC9300E8D171 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F50F5EC71B14DC9300E8D171 /* LaunchScreen.xib */; };
+		F50F5ED51B14DC9300E8D171 /* MobileOtterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F5ED41B14DC9300E8D171 /* MobileOtterTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F50F5ECF1B14DC9300E8D171 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F50F5EB11B14DC9300E8D171 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F50F5EB81B14DC9300E8D171;
+			remoteInfo = MobileOtter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F50F5EB91B14DC9300E8D171 /* MobileOtter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileOtter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F50F5EBD1B14DC9300E8D171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F50F5EBE1B14DC9300E8D171 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F50F5EC01B14DC9300E8D171 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F50F5EC31B14DC9300E8D171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F50F5EC51B14DC9300E8D171 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F50F5EC81B14DC9300E8D171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F50F5ECE1B14DC9300E8D171 /* MobileOtterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileOtterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F50F5ED31B14DC9300E8D171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F50F5ED41B14DC9300E8D171 /* MobileOtterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileOtterTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F50F5EB61B14DC9300E8D171 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F50F5ECB1B14DC9300E8D171 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F50F5EB01B14DC9300E8D171 = {
+			isa = PBXGroup;
+			children = (
+				F50F5EBB1B14DC9300E8D171 /* MobileOtter */,
+				F50F5ED11B14DC9300E8D171 /* MobileOtterTests */,
+				F50F5EBA1B14DC9300E8D171 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F50F5EBA1B14DC9300E8D171 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F50F5EB91B14DC9300E8D171 /* MobileOtter.app */,
+				F50F5ECE1B14DC9300E8D171 /* MobileOtterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F50F5EBB1B14DC9300E8D171 /* MobileOtter */ = {
+			isa = PBXGroup;
+			children = (
+				F50F5EBE1B14DC9300E8D171 /* AppDelegate.swift */,
+				F50F5EC01B14DC9300E8D171 /* ViewController.swift */,
+				F50F5EC21B14DC9300E8D171 /* Main.storyboard */,
+				F50F5EC51B14DC9300E8D171 /* Images.xcassets */,
+				F50F5EC71B14DC9300E8D171 /* LaunchScreen.xib */,
+				F50F5EBC1B14DC9300E8D171 /* Supporting Files */,
+			);
+			path = MobileOtter;
+			sourceTree = "<group>";
+		};
+		F50F5EBC1B14DC9300E8D171 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F50F5EBD1B14DC9300E8D171 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F50F5ED11B14DC9300E8D171 /* MobileOtterTests */ = {
+			isa = PBXGroup;
+			children = (
+				F50F5ED41B14DC9300E8D171 /* MobileOtterTests.swift */,
+				F50F5ED21B14DC9300E8D171 /* Supporting Files */,
+			);
+			path = MobileOtterTests;
+			sourceTree = "<group>";
+		};
+		F50F5ED21B14DC9300E8D171 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F50F5ED31B14DC9300E8D171 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F50F5EB81B14DC9300E8D171 /* MobileOtter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F50F5ED81B14DC9300E8D171 /* Build configuration list for PBXNativeTarget "MobileOtter" */;
+			buildPhases = (
+				F50F5EB51B14DC9300E8D171 /* Sources */,
+				F50F5EB61B14DC9300E8D171 /* Frameworks */,
+				F50F5EB71B14DC9300E8D171 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileOtter;
+			productName = MobileOtter;
+			productReference = F50F5EB91B14DC9300E8D171 /* MobileOtter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F50F5ECD1B14DC9300E8D171 /* MobileOtterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F50F5EDB1B14DC9300E8D171 /* Build configuration list for PBXNativeTarget "MobileOtterTests" */;
+			buildPhases = (
+				F50F5ECA1B14DC9300E8D171 /* Sources */,
+				F50F5ECB1B14DC9300E8D171 /* Frameworks */,
+				F50F5ECC1B14DC9300E8D171 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F50F5ED01B14DC9300E8D171 /* PBXTargetDependency */,
+			);
+			name = MobileOtterTests;
+			productName = MobileOtterTests;
+			productReference = F50F5ECE1B14DC9300E8D171 /* MobileOtterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F50F5EB11B14DC9300E8D171 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Brian Huynh";
+				TargetAttributes = {
+					F50F5EB81B14DC9300E8D171 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					F50F5ECD1B14DC9300E8D171 = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = F50F5EB81B14DC9300E8D171;
+					};
+				};
+			};
+			buildConfigurationList = F50F5EB41B14DC9300E8D171 /* Build configuration list for PBXProject "MobileOtter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F50F5EB01B14DC9300E8D171;
+			productRefGroup = F50F5EBA1B14DC9300E8D171 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F50F5EB81B14DC9300E8D171 /* MobileOtter */,
+				F50F5ECD1B14DC9300E8D171 /* MobileOtterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F50F5EB71B14DC9300E8D171 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50F5EC41B14DC9300E8D171 /* Main.storyboard in Resources */,
+				F50F5EC91B14DC9300E8D171 /* LaunchScreen.xib in Resources */,
+				F50F5EC61B14DC9300E8D171 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F50F5ECC1B14DC9300E8D171 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F50F5EB51B14DC9300E8D171 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50F5EC11B14DC9300E8D171 /* ViewController.swift in Sources */,
+				F50F5EBF1B14DC9300E8D171 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F50F5ECA1B14DC9300E8D171 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50F5ED51B14DC9300E8D171 /* MobileOtterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F50F5ED01B14DC9300E8D171 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F50F5EB81B14DC9300E8D171 /* MobileOtter */;
+			targetProxy = F50F5ECF1B14DC9300E8D171 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F50F5EC21B14DC9300E8D171 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F50F5EC31B14DC9300E8D171 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F50F5EC71B14DC9300E8D171 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F50F5EC81B14DC9300E8D171 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F50F5ED61B14DC9300E8D171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F50F5ED71B14DC9300E8D171 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F50F5ED91B14DC9300E8D171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MobileOtter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F50F5EDA1B14DC9300E8D171 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = MobileOtter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F50F5EDC1B14DC9300E8D171 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MobileOtterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileOtter.app/MobileOtter";
+			};
+			name = Debug;
+		};
+		F50F5EDD1B14DC9300E8D171 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = MobileOtterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileOtter.app/MobileOtter";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F50F5EB41B14DC9300E8D171 /* Build configuration list for PBXProject "MobileOtter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F50F5ED61B14DC9300E8D171 /* Debug */,
+				F50F5ED71B14DC9300E8D171 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F50F5ED81B14DC9300E8D171 /* Build configuration list for PBXNativeTarget "MobileOtter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F50F5ED91B14DC9300E8D171 /* Debug */,
+				F50F5EDA1B14DC9300E8D171 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F50F5EDB1B14DC9300E8D171 /* Build configuration list for PBXNativeTarget "MobileOtterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F50F5EDC1B14DC9300E8D171 /* Debug */,
+				F50F5EDD1B14DC9300E8D171 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F50F5EB11B14DC9300E8D171 /* Project object */;
+}
