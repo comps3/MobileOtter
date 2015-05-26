@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		F50F5EBF1B14DC9300E8D171 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F5EBE1B14DC9300E8D171 /* AppDelegate.swift */; };
-		F50F5EC11B14DC9300E8D171 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F5EC01B14DC9300E8D171 /* ViewController.swift */; };
 		F50F5EC41B14DC9300E8D171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50F5EC21B14DC9300E8D171 /* Main.storyboard */; };
 		F50F5EC61B14DC9300E8D171 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50F5EC51B14DC9300E8D171 /* Images.xcassets */; };
 		F50F5EC91B14DC9300E8D171 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F50F5EC71B14DC9300E8D171 /* LaunchScreen.xib */; };
 		F50F5ED51B14DC9300E8D171 /* MobileOtterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F5ED41B14DC9300E8D171 /* MobileOtterTests.swift */; };
+		F50F5EDF1B14DF3D00E8D171 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F5EDE1B14DF3D00E8D171 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +29,13 @@
 		F50F5EB91B14DC9300E8D171 /* MobileOtter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileOtter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50F5EBD1B14DC9300E8D171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F50F5EBE1B14DC9300E8D171 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F50F5EC01B14DC9300E8D171 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F50F5EC31B14DC9300E8D171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F50F5EC51B14DC9300E8D171 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F50F5EC81B14DC9300E8D171 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		F50F5ECE1B14DC9300E8D171 /* MobileOtterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileOtterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50F5ED31B14DC9300E8D171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F50F5ED41B14DC9300E8D171 /* MobileOtterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileOtterTests.swift; sourceTree = "<group>"; };
+		F50F5EDE1B14DF3D00E8D171 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				F50F5EBE1B14DC9300E8D171 /* AppDelegate.swift */,
-				F50F5EC01B14DC9300E8D171 /* ViewController.swift */,
+				F50F5EDE1B14DF3D00E8D171 /* HomeViewController.swift */,
 				F50F5EC21B14DC9300E8D171 /* Main.storyboard */,
 				F50F5EC51B14DC9300E8D171 /* Images.xcassets */,
 				F50F5EC71B14DC9300E8D171 /* LaunchScreen.xib */,
@@ -212,8 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F50F5EC11B14DC9300E8D171 /* ViewController.swift in Sources */,
 				F50F5EBF1B14DC9300E8D171 /* AppDelegate.swift in Sources */,
+				F50F5EDF1B14DF3D00E8D171 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
