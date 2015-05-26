@@ -1,2 +1,3 @@
 # MobileOtter
-CSUMB's Mobile Tour Guide
+
+Welcome to Otter Space!
