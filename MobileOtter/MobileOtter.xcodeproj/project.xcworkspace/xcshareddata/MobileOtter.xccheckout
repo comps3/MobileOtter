@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>1B0C4162-2B32-42BD-9623-A1C79CBD66BD</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>MobileOtter</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>AC6C016CA22459292A4D508E3F7FDD8DF9D8E80D</key>
 		<string>https://github.com/tvnerd/MobileOtter.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MobileOtter/MobileOtter.xcodeproj/project.xcworkspace</string>
+	<string>MobileOtter/MobileOtter.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>AC6C016CA22459292A4D508E3F7FDD8DF9D8E80D</key>
