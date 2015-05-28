@@ -9,10 +9,10 @@
 import UIKit
 import SwifteriOS
 
-class HomeTableViewController: UITableViewController {
+class HomeTableViewController: UITableViewController, UITableViewDelegate {
     
     let twitterFeed = TwitterFeed()
-    var tweetArray: [JSONValue] = []
+    var tweetArray: [(profileImageUrl :String, fullName:String, screenName:String, tweet:String)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,12 +21,13 @@ class HomeTableViewController: UITableViewController {
         let greenValue = CGFloat(52.0/255.0)
         let blueValue = CGFloat(106.0/255.0)
         navigationController?.navigationBar.barTintColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1.0)
-        navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
         
-        if let tweets = twitterFeed.fetchCSUMBTweets() {
-            tweetArray = tweets
-        }
+        twitterFeed.connectToTwitter()
+        twitterFeed.fetchCSUMBTweets()
+        tweetArray = twitterFeed.cleanedTweets
         
+        self.tableView.rowHeight = 95
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,9 +57,12 @@ class HomeTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("csumbTweets", forIndexPath: indexPath) as! HomeTweetTableViewCell
-        // Load an image from URL into UIImageView
-
+        let cell = tableView.dequeueReusableCellWithIdentifier("csumbTweet", forIndexPath: indexPath) as! HomeTweetTableViewCell
+        // Look through documentation to takes an URL and convert to UIImageView
+        cell.userProfileImage.image = UIImage()
+        cell.userFullName.text = tweetArray[indexPath.row].fullName
+        cell.userHandle.text = tweetArray[indexPath.row].screenName
+        cell.userTweet.text = tweetArray[indexPath.row].tweet
         return cell
     }
 
