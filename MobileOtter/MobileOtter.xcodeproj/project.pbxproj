@@ -14,7 +14,6 @@
 		F50F5EC61B14DC9300E8D171 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50F5EC51B14DC9300E8D171 /* Images.xcassets */; };
 		F50F5EC91B14DC9300E8D171 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F50F5EC71B14DC9300E8D171 /* LaunchScreen.xib */; };
 		F50F5ED51B14DC9300E8D171 /* MobileOtterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F5ED41B14DC9300E8D171 /* MobileOtterTests.swift */; };
-		F54A494E1B1618CD0046FCB8 /* TwitterFeed.swift in Sources */ = {isa = PBXBuildFile; fileRef = F54A494D1B1618CD0046FCB8 /* TwitterFeed.swift */; };
 		F54A49501B166B400046FCB8 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F54A494F1B166B400046FCB8 /* ApiKeys.plist */; };
 		F566E5FC1B152E47002E0346 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F566E5FB1B152E47002E0346 /* HomeTableViewController.swift */; };
 		F566E5FE1B153C18002E0346 /* HomeTweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F566E5FD1B153C18002E0346 /* HomeTweetTableViewCell.swift */; };
@@ -97,7 +96,6 @@
 		F50F5ECE1B14DC9300E8D171 /* MobileOtterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileOtterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50F5ED31B14DC9300E8D171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F50F5ED41B14DC9300E8D171 /* MobileOtterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileOtterTests.swift; sourceTree = "<group>"; };
-		F54A494D1B1618CD0046FCB8 /* TwitterFeed.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterFeed.swift; sourceTree = "<group>"; };
 		F54A494F1B166B400046FCB8 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
 		F566E5FB1B152E47002E0346 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		F566E5FD1B153C18002E0346 /* HomeTweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTweetTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,7 +159,6 @@
 				F566E5FD1B153C18002E0346 /* HomeTweetTableViewCell.swift */,
 				F566E5FB1B152E47002E0346 /* HomeTableViewController.swift */,
 				F54A494F1B166B400046FCB8 /* ApiKeys.plist */,
-				F54A494D1B1618CD0046FCB8 /* TwitterFeed.swift */,
 				F50F5EC51B14DC9300E8D171 /* Images.xcassets */,
 				F50F5EC71B14DC9300E8D171 /* LaunchScreen.xib */,
 				F50F5EBC1B14DC9300E8D171 /* Supporting Files */,
@@ -344,7 +341,6 @@
 				F566E5FE1B153C18002E0346 /* HomeTweetTableViewCell.swift in Sources */,
 				F566E5FC1B152E47002E0346 /* HomeTableViewController.swift in Sources */,
 				F50F5EBF1B14DC9300E8D171 /* AppDelegate.swift in Sources */,
-				F54A494E1B1618CD0046FCB8 /* TwitterFeed.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

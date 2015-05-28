@@ -14,49 +14,45 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="csumbTweet" rowHeight="95" id="STS-X6-F4C" customClass="HomeTweetTableViewCell" customModule="MobileOtter" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="csumbTweet" rowHeight="105" id="STS-X6-F4C" customClass="HomeTweetTableViewCell" customModule="MobileOtter" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="STS-X6-F4C" id="GT0-ks-uXh">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d42-JD-K7b">
-                                            <rect key="frame" x="8" y="19" width="55" height="55"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alice Bob" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ep1-TV-KVg">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Alice Bob" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ep1-TV-KVg">
                                             <rect key="frame" x="71" y="19" width="58" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@alicebob" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv7-dt-cJk">
-                                            <rect key="frame" x="140" y="19" width="53" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@alicebob" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv7-dt-cJk">
+                                            <rect key="frame" x="137" y="14" width="53" height="31"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="textColor" red="0.26669034090909072" green="0.26669034090909072" blue="0.26669034090909072" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eoO-4O-if7">
-                                            <rect key="frame" x="66" y="37" width="526" height="49"/>
+                                            <rect key="frame" x="66" y="37" width="526" height="59"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                         </textView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d42-JD-K7b">
+                                            <rect key="frame" x="8" y="24" width="55" height="55"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Gv7-dt-cJk" firstAttribute="top" secondItem="GT0-ks-uXh" secondAttribute="topMargin" constant="11" id="2rB-E8-VX7"/>
                                         <constraint firstItem="eoO-4O-if7" firstAttribute="trailing" secondItem="GT0-ks-uXh" secondAttribute="trailingMargin" id="3oK-Js-Ga1"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="d42-JD-K7b" secondAttribute="bottom" constant="12" id="6Eq-tj-aEN"/>
-                                        <constraint firstItem="d42-JD-K7b" firstAttribute="top" secondItem="GT0-ks-uXh" secondAttribute="topMargin" constant="11" id="6iz-4C-I98"/>
                                         <constraint firstItem="eoO-4O-if7" firstAttribute="top" secondItem="GT0-ks-uXh" secondAttribute="topMargin" constant="29" id="Ahj-mT-Dq3"/>
-                                        <constraint firstItem="Gv7-dt-cJk" firstAttribute="leading" secondItem="GT0-ks-uXh" secondAttribute="leadingMargin" constant="132" id="K1M-YY-bjj"/>
+                                        <constraint firstItem="Gv7-dt-cJk" firstAttribute="leading" secondItem="ep1-TV-KVg" secondAttribute="trailing" constant="11" id="CzC-Rx-yj2"/>
                                         <constraint firstItem="ep1-TV-KVg" firstAttribute="leading" secondItem="GT0-ks-uXh" secondAttribute="leadingMargin" constant="63" id="LV1-c9-QGV"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Gv7-dt-cJk" secondAttribute="bottom" constant="46" id="Mb7-JV-uqW"/>
-                                        <constraint firstItem="ep1-TV-KVg" firstAttribute="top" secondItem="GT0-ks-uXh" secondAttribute="topMargin" constant="11" id="Sso-X0-Njd"/>
                                         <constraint firstItem="eoO-4O-if7" firstAttribute="leading" secondItem="GT0-ks-uXh" secondAttribute="leadingMargin" constant="58" id="V48-f2-rUN"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="ep1-TV-KVg" secondAttribute="bottom" constant="46" id="Xqy-Ib-Zwi"/>
                                         <constraint firstItem="eoO-4O-if7" firstAttribute="bottom" secondItem="GT0-ks-uXh" secondAttribute="bottomMargin" id="a4v-6u-Wrt"/>
-                                        <constraint firstItem="d42-JD-K7b" firstAttribute="leading" secondItem="GT0-ks-uXh" secondAttribute="leadingMargin" id="ep2-RT-oDO"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="d42-JD-K7b" secondAttribute="trailing" constant="529" id="pNP-PF-V2k"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
