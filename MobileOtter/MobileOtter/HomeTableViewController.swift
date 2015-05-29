@@ -12,11 +12,11 @@ import SwifteriOS
 class HomeTableViewController: UITableViewController, UITableViewDelegate {
     
     var twitterConnection: Swifter?
-    var tweetArray: [(profileImage :UIImage, fullName:String, screenName:String, tweet:String)] = []
+    var tweetArray: [(profileImage :UIImage, fullName:String, screenName:String, tweet:String, timeStamp: String)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // Sets the color of navigation bar
         let redValue = CGFloat(34.0/255.0)
         let greenValue = CGFloat(52.0/255.0)
         let blueValue = CGFloat(106.0/255.0)
@@ -24,7 +24,9 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
         navigationController?.navigationBar.barTintColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1.0)
         UIApplication.sharedApplication().statusBarStyle = .LightContent
         
+        // Intializes a connection to Twitter
         connectToTwitter()
+        // Begin fetching CSUMB Tweets
         fetchCSUMBTweets()
     }
     
@@ -50,45 +52,58 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
             error in
             println("\(error.localizedDescription)")
         }
-        
+        // Used Twitter API: /statuses/user_timeline.json
         self.twitterConnection!.getStatusesUserTimelineWithUserID("18624536", count: 50, sinceID: nil, maxID: nil, trimUser: nil, contributorDetails: nil, includeEntities: false, success: {( rawTweets: [JSONValue]?) in
+            // Loops through tweets pulled from CSUMB's Timeline
             if let tweets = rawTweets {
                 for i in 0..<tweets.count {
+                    // Display the original person if their tweet was retweeted
                     if let name = tweets[i]["retweeted_status"]["user"]["name"].string {
                         if let screen_name = tweets[i]["retweeted_status"]["user"]["screen_name"].string {
                             if let tweet = tweets[i]["retweeted_status"]["text"].string {
                                 if let userImage = tweets[i]["retweeted_status"]["user"]["profile_image_url"].string {
-                                    if let imageURL = NSURL(string: userImage) {
+                                    if let tweetTimestamp = tweets[i]["retweeted_status"]["created_at"].string {
+                                       if let imageURL = NSURL(string: userImage) {
                                         if let imageData = NSData(contentsOfURL: imageURL) {
                                             if let finalImage = UIImage(data: imageData) {
-                                                 self.tweetArray.append((profileImage: finalImage, fullName: name, screenName: screen_name, tweet: tweet))
+                                                if let finalTimestamp = self.convertTweetTimestampToUsableDate(tweetTimestamp) {
+                                                    self.tweetArray.append(profileImage: finalImage, fullName: name, screenName: screen_name, tweet: tweet, timeStamp: finalTimestamp)
+                                                 println(finalTimestamp)
+                                                }
                                             }
                                         }
                                    
                                     }
+                                  }
                                 }
                             }
                         }
                     }
                     else {
+                        // Display CSUMB's tweets
                         if let csumbImage = tweets[i]["user"]["profile_image_url"].string {
                             if let csumbName = tweets[i]["user"]["name"].string {
                                 if let csumbScreenName = tweets[i]["user"]["screen_name"].string {
                                     if let csumbText = tweets[i]["text"].string {
-                                        if let imageURL = NSURL(string: csumbImage) {
+                                       if let tweetTimestamp = tweets[i]["created_at"].string {
+                                           let finalTimestamp = self.convertTweetTimestampToUsableDate(tweetTimestamp)
+                                         if let imageURL = NSURL(string: csumbImage) {
                                             if let imageData = NSData(contentsOfURL: imageURL) {
                                                 if let finalImage = UIImage(data: imageData) {
-                                                    self.tweetArray.append((profileImage: finalImage, fullName: csumbName, screenName: csumbScreenName, tweet: csumbText))
+                                                    if let finalTimestamp = self.convertTweetTimestampToUsableDate(tweetTimestamp) {
+                                                    println(finalTimestamp)
+                                                    self.tweetArray.append(profileImage: finalImage, fullName: csumbName, screenName: csumbScreenName, tweet: csumbText, timeStamp: finalTimestamp)
+                                                    }
                                                 }
                                             }
-                                            
-                                        }
+                                         }
+                                       }
                                     }
-                                }
-                            }
-                        }
-                        
+                                  }
+                             }
+                          }
                     }
+                    // Interesting stuff...
                     NSOperationQueue.mainQueue().addOperationWithBlock() { () in
                         self.tableView.reloadData()
                     }
@@ -97,6 +112,32 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
             }
             
             }, failure: failureHandler)
+    }
+    
+    // Converts timestamp from JSON to iOS Date Standard
+    func convertTweetTimestampToUsableDate(tweetDate: String) -> String? {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "EEE MMM d HH:mm:ss Z yyyy"
+        if let date = dateFormatter.dateFromString(tweetDate) {
+            let currentDate = NSDate()
+            let secondsFromCreation = currentDate.timeIntervalSinceDate(date)
+            
+            if secondsFromCreation > 86458 {
+                let calendar = NSCalendar.currentCalendar()
+                let dateComponents = calendar.components(.CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitYear, fromDate: date)
+                return "\(dateComponents.month)/\(dateComponents.day)/\(dateComponents.year)"
+            }
+            
+            switch secondsFromCreation {
+                case 0...59: return "\(secondsFromCreation) sec"
+                case 60...3599: return "\(Int(secondsFromCreation / 60)) min"
+                case 3600...86458: return "\(Int(secondsFromCreation / 3600)) hr"
+                default: println("Houston, we may have a problem...")
+            }
+            
+            
+        }
+        return nil
     }
 
     override func didReceiveMemoryWarning() {
@@ -123,7 +164,6 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
         }
         
     }
-
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("csumbTweet", forIndexPath: indexPath) as! HomeTweetTableViewCell
@@ -132,6 +172,7 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
         cell.userFullName.text = tweetArray[indexPath.row].fullName
         cell.userHandle.text = "@\(tweetArray[indexPath.row].screenName)"
         cell.userTweet.text = tweetArray[indexPath.row].tweet
+        cell.timeStamp.text = tweetArray[indexPath.row].timeStamp
         return cell
     }
 

@@ -14,18 +14,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="csumbTweet" rowHeight="105" id="STS-X6-F4C" customClass="HomeTweetTableViewCell" customModule="MobileOtter" customModuleProvider="target">
+                            <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="csumbTweet" rowHeight="105" id="STS-X6-F4C" customClass="HomeTweetTableViewCell" customModule="MobileOtter" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="STS-X6-F4C" id="GT0-ks-uXh">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Alice Bob" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ep1-TV-KVg">
-                                            <rect key="frame" x="71" y="19" width="58" height="21"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d42-JD-K7b">
+                                            <rect key="frame" x="8" y="24" width="55" height="55"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Full Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ep1-TV-KVg">
+                                            <rect key="frame" x="71" y="19" width="61" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@alicebob" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv7-dt-cJk">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="@handle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv7-dt-cJk">
                                             <rect key="frame" x="137" y="14" width="53" height="31"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" red="0.26669034090909072" green="0.26669034090909072" blue="0.26669034090909072" alpha="1" colorSpace="calibratedRGB"/>
@@ -39,9 +42,12 @@
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             <dataDetectorType key="dataDetectorTypes" link="YES"/>
                                         </textView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d42-JD-K7b">
-                                            <rect key="frame" x="8" y="24" width="55" height="55"/>
-                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Time" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iwF-0A-cgX">
+                                            <rect key="frame" x="292" y="24" width="26" height="14"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.26669034089999999" green="0.26669034089999999" blue="0.26669034089999999" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Gv7-dt-cJk" firstAttribute="top" secondItem="GT0-ks-uXh" secondAttribute="topMargin" constant="11" id="2rB-E8-VX7"/>
@@ -53,9 +59,11 @@
                                         <constraint firstAttribute="bottomMargin" secondItem="Gv7-dt-cJk" secondAttribute="bottom" constant="46" id="Mb7-JV-uqW"/>
                                         <constraint firstItem="eoO-4O-if7" firstAttribute="leading" secondItem="GT0-ks-uXh" secondAttribute="leadingMargin" constant="58" id="V48-f2-rUN"/>
                                         <constraint firstItem="eoO-4O-if7" firstAttribute="bottom" secondItem="GT0-ks-uXh" secondAttribute="bottomMargin" id="a4v-6u-Wrt"/>
+                                        <constraint firstItem="eoO-4O-if7" firstAttribute="top" secondItem="iwF-0A-cgX" secondAttribute="bottom" constant="-3" id="mgo-4z-gu3"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="timeStamp" destination="iwF-0A-cgX" id="EC4-tn-Xqw"/>
                                     <outlet property="userFullName" destination="ep1-TV-KVg" id="6iM-Gj-rLw"/>
                                     <outlet property="userHandle" destination="Gv7-dt-cJk" id="8jj-id-oO7"/>
                                     <outlet property="userProfileImage" destination="d42-JD-K7b" id="5Te-D2-PX0"/>

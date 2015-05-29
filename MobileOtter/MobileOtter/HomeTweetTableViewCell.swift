@@ -10,9 +10,11 @@ import UIKit
 
 class HomeTweetTableViewCell: UITableViewCell {
     
+    // Elements of custom table view cell
     @IBOutlet weak var userProfileImage: UIImageView!
     @IBOutlet weak var userFullName: UILabel!
     @IBOutlet weak var userHandle: UILabel!
     @IBOutlet weak var userTweet: UITextView!
+    @IBOutlet weak var timeStamp: UILabel!
    
 }
