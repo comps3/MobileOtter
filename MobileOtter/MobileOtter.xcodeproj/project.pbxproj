@@ -7,16 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E56051B1E4DA5EAA23673D9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 82B4C8E7525B73246DF92912 /* libPods.a */; };
 		F50007E71B15855D00D29391 /* SwifteriOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F50007E01B15850500D29391 /* SwifteriOS.framework */; };
 		F50007E81B15855D00D29391 /* SwifteriOS.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F50007E01B15850500D29391 /* SwifteriOS.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F50A3E3E1B17FE2E000573C5 /* CampusMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50A3E3D1B17FE2E000573C5 /* CampusMapViewController.swift */; };
 		F50F5EBF1B14DC9300E8D171 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F5EBE1B14DC9300E8D171 /* AppDelegate.swift */; };
 		F50F5EC41B14DC9300E8D171 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50F5EC21B14DC9300E8D171 /* Main.storyboard */; };
 		F50F5EC61B14DC9300E8D171 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50F5EC51B14DC9300E8D171 /* Images.xcassets */; };
 		F50F5EC91B14DC9300E8D171 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F50F5EC71B14DC9300E8D171 /* LaunchScreen.xib */; };
 		F50F5ED51B14DC9300E8D171 /* MobileOtterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50F5ED41B14DC9300E8D171 /* MobileOtterTests.swift */; };
 		F54A49501B166B400046FCB8 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = F54A494F1B166B400046FCB8 /* ApiKeys.plist */; };
+		F55724EC1B1F803B00FDA226 /* CampusDatabaseConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55724EB1B1F803B00FDA226 /* CampusDatabaseConnection.swift */; };
+		F55724F31B1FA37C00FDA226 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55724F21B1FA37C00FDA226 /* CoreLocation.framework */; };
 		F566E5FC1B152E47002E0346 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F566E5FB1B152E47002E0346 /* HomeTableViewController.swift */; };
 		F566E5FE1B153C18002E0346 /* HomeTweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F566E5FD1B153C18002E0346 /* HomeTweetTableViewCell.swift */; };
+		F5BCFE231B20A09D001763ED /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BCFE221B20A09D001763ED /* Place.swift */; };
+		F5BCFE291B20AA1C001763ED /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BCFE281B20AA1C001763ED /* Tweet.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,7 +92,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3E6B3F6946CDAC6D297975EE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		82B4C8E7525B73246DF92912 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B15F8300AD343C42D47D2B2 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F50007D51B15850500D29391 /* Swifter.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Swifter.xcodeproj; path = "../../../Downloads/Swifter-master/Swifter.xcodeproj"; sourceTree = "<group>"; };
+		F50A3E3D1B17FE2E000573C5 /* CampusMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusMapViewController.swift; sourceTree = "<group>"; };
 		F50F5EB91B14DC9300E8D171 /* MobileOtter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileOtter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F50F5EBD1B14DC9300E8D171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F50F5EBE1B14DC9300E8D171 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,8 +107,12 @@
 		F50F5ED31B14DC9300E8D171 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F50F5ED41B14DC9300E8D171 /* MobileOtterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileOtterTests.swift; sourceTree = "<group>"; };
 		F54A494F1B166B400046FCB8 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ApiKeys.plist; sourceTree = "<group>"; };
+		F55724EB1B1F803B00FDA226 /* CampusDatabaseConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CampusDatabaseConnection.swift; sourceTree = "<group>"; };
+		F55724F21B1FA37C00FDA226 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F566E5FB1B152E47002E0346 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		F566E5FD1B153C18002E0346 /* HomeTweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTweetTableViewCell.swift; sourceTree = "<group>"; };
+		F5BCFE221B20A09D001763ED /* Place.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		F5BCFE281B20AA1C001763ED /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +120,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F55724F31B1FA37C00FDA226 /* CoreLocation.framework in Frameworks */,
 				F50007E71B15855D00D29391 /* SwifteriOS.framework in Frameworks */,
+				7E56051B1E4DA5EAA23673D9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +136,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		53D745AB18F85EDC710DBEC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E6B3F6946CDAC6D297975EE /* Pods.debug.xcconfig */,
+				8B15F8300AD343C42D47D2B2 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ADEB0B603F65E2E2878E2312 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F55724F21B1FA37C00FDA226 /* CoreLocation.framework */,
+				82B4C8E7525B73246DF92912 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F50007D61B15850500D29391 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -139,6 +173,8 @@
 				F50F5EBB1B14DC9300E8D171 /* MobileOtter */,
 				F50F5ED11B14DC9300E8D171 /* MobileOtterTests */,
 				F50F5EBA1B14DC9300E8D171 /* Products */,
+				53D745AB18F85EDC710DBEC2 /* Pods */,
+				ADEB0B603F65E2E2878E2312 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,12 +191,13 @@
 			isa = PBXGroup;
 			children = (
 				F50F5EBE1B14DC9300E8D171 /* AppDelegate.swift */,
+				F55724EB1B1F803B00FDA226 /* CampusDatabaseConnection.swift */,
+				F50A3E3D1B17FE2E000573C5 /* CampusMapViewController.swift */,
 				F50F5EC21B14DC9300E8D171 /* Main.storyboard */,
 				F566E5FD1B153C18002E0346 /* HomeTweetTableViewCell.swift */,
 				F566E5FB1B152E47002E0346 /* HomeTableViewController.swift */,
-				F54A494F1B166B400046FCB8 /* ApiKeys.plist */,
-				F50F5EC51B14DC9300E8D171 /* Images.xcassets */,
-				F50F5EC71B14DC9300E8D171 /* LaunchScreen.xib */,
+				F5BCFE221B20A09D001763ED /* Place.swift */,
+				F5BCFE281B20AA1C001763ED /* Tweet.swift */,
 				F50F5EBC1B14DC9300E8D171 /* Supporting Files */,
 			);
 			path = MobileOtter;
@@ -169,7 +206,10 @@
 		F50F5EBC1B14DC9300E8D171 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F50F5EC71B14DC9300E8D171 /* LaunchScreen.xib */,
+				F50F5EC51B14DC9300E8D171 /* Images.xcassets */,
 				F50F5EBD1B14DC9300E8D171 /* Info.plist */,
+				F54A494F1B166B400046FCB8 /* ApiKeys.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -198,10 +238,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F50F5ED81B14DC9300E8D171 /* Build configuration list for PBXNativeTarget "MobileOtter" */;
 			buildPhases = (
+				F2425E660C07B5EA0B4AC328 /* Check Pods Manifest.lock */,
 				F50F5EB51B14DC9300E8D171 /* Sources */,
 				F50F5EB61B14DC9300E8D171 /* Frameworks */,
 				F50F5EB71B14DC9300E8D171 /* Resources */,
 				F50007EB1B15855D00D29391 /* Embed Frameworks */,
+				060C872EE5B0C3D045C126F6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -333,13 +375,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		060C872EE5B0C3D045C126F6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2425E660C07B5EA0B4AC328 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F50F5EB51B14DC9300E8D171 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				F566E5FE1B153C18002E0346 /* HomeTweetTableViewCell.swift in Sources */,
+				F55724EC1B1F803B00FDA226 /* CampusDatabaseConnection.swift in Sources */,
 				F566E5FC1B152E47002E0346 /* HomeTableViewController.swift in Sources */,
+				F5BCFE291B20AA1C001763ED /* Tweet.swift in Sources */,
+				F5BCFE231B20A09D001763ED /* Place.swift in Sources */,
+				F50A3E3E1B17FE2E000573C5 /* CampusMapViewController.swift in Sources */,
 				F50F5EBF1B14DC9300E8D171 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +549,7 @@
 		};
 		F50F5ED91B14DC9300E8D171 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E6B3F6946CDAC6D297975EE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobileOtter/Info.plist;
@@ -480,6 +560,7 @@
 		};
 		F50F5EDA1B14DC9300E8D171 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B15F8300AD343C42D47D2B2 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MobileOtter/Info.plist;

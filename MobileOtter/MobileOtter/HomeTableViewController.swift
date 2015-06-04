@@ -12,7 +12,7 @@ import SwifteriOS
 class HomeTableViewController: UITableViewController, UITableViewDelegate {
     
     var twitterConnection: Swifter?
-    var tweetArray: [(profileImage :UIImage, fullName:String, screenName:String, tweet:String, timeStamp: String)] = []
+    var tweetArray: [Tweet] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,7 +52,7 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
             error in
             println("\(error.localizedDescription)")
         }
-        // Used Twitter API: /statuses/user_timeline.json
+        // Twitter API: /statuses/user_timeline.json
         self.twitterConnection!.getStatusesUserTimelineWithUserID("18624536", count: 50, sinceID: nil, maxID: nil, trimUser: nil, contributorDetails: nil, includeEntities: false, success: {( rawTweets: [JSONValue]?) in
             // Loops through tweets pulled from CSUMB's Timeline
             if let tweets = rawTweets {
@@ -63,18 +63,10 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
                             if let tweet = tweets[i]["retweeted_status"]["text"].string {
                                 if let userImage = tweets[i]["retweeted_status"]["user"]["profile_image_url"].string {
                                     if let tweetTimestamp = tweets[i]["retweeted_status"]["created_at"].string {
-                                       if let imageURL = NSURL(string: userImage) {
-                                        if let imageData = NSData(contentsOfURL: imageURL) {
-                                            if let finalImage = UIImage(data: imageData) {
-                                                if let finalTimestamp = self.convertTweetTimestampToUsableDate(tweetTimestamp) {
-                                                    self.tweetArray.append(profileImage: finalImage, fullName: name, screenName: screen_name, tweet: tweet, timeStamp: finalTimestamp)
-                                                 println(finalTimestamp)
-                                                }
-                                            }
+                                        if let finalTimestamp = self.convertTweetTimestampToUsableDate(tweetTimestamp) {
+                                            self.tweetArray.append(Tweet(profileImageURL: userImage, name: name, screenName: screen_name, tweet: tweet, timeStamp: tweetTimestamp))
                                         }
-                                   
                                     }
-                                  }
                                 }
                             }
                         }
@@ -86,20 +78,12 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
                                 if let csumbScreenName = tweets[i]["user"]["screen_name"].string {
                                     if let csumbText = tweets[i]["text"].string {
                                        if let tweetTimestamp = tweets[i]["created_at"].string {
-                                           let finalTimestamp = self.convertTweetTimestampToUsableDate(tweetTimestamp)
-                                         if let imageURL = NSURL(string: csumbImage) {
-                                            if let imageData = NSData(contentsOfURL: imageURL) {
-                                                if let finalImage = UIImage(data: imageData) {
-                                                    if let finalTimestamp = self.convertTweetTimestampToUsableDate(tweetTimestamp) {
-                                                    println(finalTimestamp)
-                                                    self.tweetArray.append(profileImage: finalImage, fullName: csumbName, screenName: csumbScreenName, tweet: csumbText, timeStamp: finalTimestamp)
-                                                    }
-                                                }
+                                            if let finalTimestamp = self.convertTweetTimestampToUsableDate(tweetTimestamp) {
+                                                self.tweetArray.append(Tweet(profileImageURL: csumbImage, name: csumbName, screenName: csumbScreenName, tweet: csumbText, timeStamp: tweetTimestamp))
                                             }
-                                         }
                                        }
                                     }
-                                  }
+                                }
                              }
                           }
                     }
@@ -139,6 +123,17 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
         }
         return nil
     }
+    
+    func fetchImageFromURL(url: String) -> UIImage? {
+        if let imageURL = NSURL(string: url) {
+            if let imageData = NSData(contentsOfURL: imageURL) {
+                if let finalImage = UIImage(data: imageData) {
+                    return finalImage
+                }
+            }
+        }
+        return nil
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -167,9 +162,9 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("csumbTweet", forIndexPath: indexPath) as! HomeTweetTableViewCell
-        // Look through documentation to takes an URL and convert to UIImageView
-        cell.userProfileImage.image = tweetArray[indexPath.row].profileImage
-        cell.userFullName.text = tweetArray[indexPath.row].fullName
+
+        cell.userProfileImage.image = fetchImageFromURL(tweetArray[indexPath.row].profileImageURL)
+        cell.userFullName.text = tweetArray[indexPath.row].name
         cell.userHandle.text = "@\(tweetArray[indexPath.row].screenName)"
         cell.userTweet.text = tweetArray[indexPath.row].tweet
         cell.timeStamp.text = tweetArray[indexPath.row].timeStamp
