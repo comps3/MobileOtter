@@ -124,7 +124,7 @@
                             <view alpha="0.69999999999999996" contentMode="scaleToFill" verticalHuggingPriority="255" translatesAutoresizingMaskIntoConstraints="NO" id="e4x-Oc-xVZ">
                                 <rect key="frame" x="16" y="28" width="568" height="38"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EeL-Ha-XQQ">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="255" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="EeL-Ha-XQQ">
                                         <rect key="frame" x="41" y="4" width="488" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>

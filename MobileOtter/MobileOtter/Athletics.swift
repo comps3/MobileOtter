@@ -1,5 +1,5 @@
 //
-//  Place.swift
+//  Athletics.swift
 //  MobileOtter
 //
 //  Created by Brian Huynh on 6/4/15.
@@ -8,10 +8,9 @@
 
 import Foundation
 
-struct Place {
-    var type: Int
+struct Athletics {
     var name: String
-    var latitude: Double
-    var longitude: Double
+    var long: Double
+    var lat: Double
     var description: String
 }

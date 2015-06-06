@@ -1,5 +1,5 @@
 //
-//  Place.swift
+//  Building.swift
 //  MobileOtter
 //
 //  Created by Brian Huynh on 6/4/15.
@@ -8,10 +8,11 @@
 
 import Foundation
 
-struct Place {
+struct Building {
+    var id: Int
     var type: Int
     var name: String
-    var latitude: Double
-    var longitude: Double
+    var long: Double
+    var lat: Double
     var description: String
 }
