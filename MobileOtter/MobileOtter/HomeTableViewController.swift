@@ -64,7 +64,7 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
                                 if let userImage = tweets[i]["retweeted_status"]["user"]["profile_image_url"].string {
                                     if let tweetTimestamp = tweets[i]["retweeted_status"]["created_at"].string {
                                         if let finalTimestamp = self.convertTweetTimestampToUsableDate(tweetTimestamp) {
-                                            self.tweetArray.append(Tweet(profileImageURL: userImage, name: name, screenName: screen_name, tweet: tweet, timeStamp: tweetTimestamp))
+                                            self.tweetArray.append(Tweet(profileImageURL: userImage, name: name, screenName: screen_name, tweet: tweet, timeStamp: finalTimestamp))
                                         }
                                     }
                                 }
@@ -79,7 +79,7 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
                                     if let csumbText = tweets[i]["text"].string {
                                        if let tweetTimestamp = tweets[i]["created_at"].string {
                                             if let finalTimestamp = self.convertTweetTimestampToUsableDate(tweetTimestamp) {
-                                                self.tweetArray.append(Tweet(profileImageURL: csumbImage, name: csumbName, screenName: csumbScreenName, tweet: csumbText, timeStamp: tweetTimestamp))
+                                                self.tweetArray.append(Tweet(profileImageURL: csumbImage, name: csumbName, screenName: csumbScreenName, tweet: csumbText, timeStamp: finalTimestamp))
                                             }
                                        }
                                     }
@@ -104,18 +104,22 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
         dateFormatter.dateFormat = "EEE MMM d HH:mm:ss Z yyyy"
         if let date = dateFormatter.dateFromString(tweetDate) {
             let currentDate = NSDate()
-            let secondsFromCreation = currentDate.timeIntervalSinceDate(date)
+            let secondsFromCreation = Int(currentDate.timeIntervalSinceDate(date))
+            println("Seconds from creation \(secondsFromCreation)")
             
             if secondsFromCreation > 86458 {
                 let calendar = NSCalendar.currentCalendar()
                 let dateComponents = calendar.components(.CalendarUnitMonth | .CalendarUnitDay | .CalendarUnitYear, fromDate: date)
+                println("Month: \(dateComponents.month)")
+                println("Day: \(dateComponents.day)")
+                println("Year: \(dateComponents.year)")
                 return "\(dateComponents.month)/\(dateComponents.day)/\(dateComponents.year)"
             }
             
             switch secondsFromCreation {
-                case 0...59: return "\(secondsFromCreation) sec"
-                case 60...3599: return "\(Int(secondsFromCreation / 60)) min"
-                case 3600...86458: return "\(Int(secondsFromCreation / 3600)) hr"
+                case 0...59: println("Seconds: \(secondsFromCreation)"); return "\(secondsFromCreation) sec"
+                case 60...3599: println("Minutes: \(Int(secondsFromCreation / 60))"); return "\(Int(secondsFromCreation / 60)) min"
+                case 3600...86458: println("Hours: \(Int(secondsFromCreation / 3600)) hr"); return "\(Int(secondsFromCreation / 3600)) hr"
                 default: println("Houston, we may have a problem...")
             }
             
@@ -164,9 +168,13 @@ class HomeTableViewController: UITableViewController, UITableViewDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier("csumbTweet", forIndexPath: indexPath) as! HomeTweetTableViewCell
 
         cell.userProfileImage.image = fetchImageFromURL(tweetArray[indexPath.row].profileImageURL)
+        cell.userProfileImage.layer.cornerRadius = 8.0
+        cell.userProfileImage.clipsToBounds = true
+    
         cell.userFullName.text = tweetArray[indexPath.row].name
         cell.userHandle.text = "@\(tweetArray[indexPath.row].screenName)"
         cell.userTweet.text = tweetArray[indexPath.row].tweet
+        //println(tweetArray[indexPath.row].timeStamp)
         cell.timeStamp.text = tweetArray[indexPath.row].timeStamp
         return cell
     }

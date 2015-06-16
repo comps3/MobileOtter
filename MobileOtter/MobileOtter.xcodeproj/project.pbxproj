@@ -21,6 +21,8 @@
 		F55724F31B1FA37C00FDA226 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F55724F21B1FA37C00FDA226 /* CoreLocation.framework */; };
 		F566E5FC1B152E47002E0346 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F566E5FB1B152E47002E0346 /* HomeTableViewController.swift */; };
 		F566E5FE1B153C18002E0346 /* HomeTweetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F566E5FD1B153C18002E0346 /* HomeTweetTableViewCell.swift */; };
+		F5AF370C1B2F5C4B00F7F498 /* FeedbackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5AF370B1B2F5C4B00F7F498 /* FeedbackViewController.swift */; };
+		F5AF37141B2F8B8600F7F498 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5AF37131B2F8B8600F7F498 /* QuartzCore.framework */; };
 		F5BCFE291B20AA1C001763ED /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BCFE281B20AA1C001763ED /* Tweet.swift */; };
 		F5BCFE2C1B20F9B4001763ED /* Building.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BCFE2B1B20F9B4001763ED /* Building.swift */; };
 		F5BCFE321B20F9E7001763ED /* Parking.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5BCFE311B20F9E7001763ED /* Parking.swift */; };
@@ -114,6 +116,8 @@
 		F55724F21B1FA37C00FDA226 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		F566E5FB1B152E47002E0346 /* HomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		F566E5FD1B153C18002E0346 /* HomeTweetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTweetTableViewCell.swift; sourceTree = "<group>"; };
+		F5AF370B1B2F5C4B00F7F498 /* FeedbackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackViewController.swift; sourceTree = "<group>"; };
+		F5AF37131B2F8B8600F7F498 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		F5BCFE281B20AA1C001763ED /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		F5BCFE2B1B20F9B4001763ED /* Building.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Building.swift; sourceTree = "<group>"; };
 		F5BCFE311B20F9E7001763ED /* Parking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parking.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5AF37141B2F8B8600F7F498 /* QuartzCore.framework in Frameworks */,
 				F55724F31B1FA37C00FDA226 /* CoreLocation.framework in Frameworks */,
 				F50007E71B15855D00D29391 /* SwifteriOS.framework in Frameworks */,
 				7E56051B1E4DA5EAA23673D9 /* libPods.a in Frameworks */,
@@ -154,6 +159,7 @@
 		ADEB0B603F65E2E2878E2312 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F5AF37131B2F8B8600F7F498 /* QuartzCore.framework */,
 				F55724F21B1FA37C00FDA226 /* CoreLocation.framework */,
 				82B4C8E7525B73246DF92912 /* libPods.a */,
 			);
@@ -196,17 +202,11 @@
 		F50F5EBB1B14DC9300E8D171 /* MobileOtter */ = {
 			isa = PBXGroup;
 			children = (
+				F5AF37121B2F5C9F00F7F498 /* Maps */,
+				F5AF37111B2F5C6A00F7F498 /* Social Feed */,
 				F50F5EBE1B14DC9300E8D171 /* AppDelegate.swift */,
-				F5BCFE331B20FA29001763ED /* Athletics.swift */,
-				F5BCFE2B1B20F9B4001763ED /* Building.swift */,
-				F55724EB1B1F803B00FDA226 /* CampusDatabaseConnection.swift */,
-				F50A3E3D1B17FE2E000573C5 /* CampusMapViewController.swift */,
 				F50F5EC21B14DC9300E8D171 /* Main.storyboard */,
-				F566E5FD1B153C18002E0346 /* HomeTweetTableViewCell.swift */,
-				F566E5FB1B152E47002E0346 /* HomeTableViewController.swift */,
-				F5BCFE311B20F9E7001763ED /* Parking.swift */,
-				F5BCFE351B20FD06001763ED /* Place.swift */,
-				F5BCFE281B20AA1C001763ED /* Tweet.swift */,
+				F5AF370B1B2F5C4B00F7F498 /* FeedbackViewController.swift */,
 				F50F5EBC1B14DC9300E8D171 /* Supporting Files */,
 			);
 			path = MobileOtter;
@@ -238,6 +238,29 @@
 				F50F5ED31B14DC9300E8D171 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F5AF37111B2F5C6A00F7F498 /* Social Feed */ = {
+			isa = PBXGroup;
+			children = (
+				F566E5FB1B152E47002E0346 /* HomeTableViewController.swift */,
+				F566E5FD1B153C18002E0346 /* HomeTweetTableViewCell.swift */,
+				F5BCFE281B20AA1C001763ED /* Tweet.swift */,
+			);
+			name = "Social Feed";
+			sourceTree = "<group>";
+		};
+		F5AF37121B2F5C9F00F7F498 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				F5BCFE331B20FA29001763ED /* Athletics.swift */,
+				F5BCFE2B1B20F9B4001763ED /* Building.swift */,
+				F55724EB1B1F803B00FDA226 /* CampusDatabaseConnection.swift */,
+				F50A3E3D1B17FE2E000573C5 /* CampusMapViewController.swift */,
+				F5BCFE311B20F9E7001763ED /* Parking.swift */,
+				F5BCFE351B20FD06001763ED /* Place.swift */,
+			);
+			name = Maps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -431,6 +454,7 @@
 				F50A3E3E1B17FE2E000573C5 /* CampusMapViewController.swift in Sources */,
 				F50F5EBF1B14DC9300E8D171 /* AppDelegate.swift in Sources */,
 				F5BCFE2C1B20F9B4001763ED /* Building.swift in Sources */,
+				F5AF370C1B2F5C4B00F7F498 /* FeedbackViewController.swift in Sources */,
 				F5BCFE361B20FD06001763ED /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

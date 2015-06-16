@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let filePath = NSBundle.mainBundle().pathForResource("ApiKeys", ofType:"plist")
         let plist = NSDictionary(contentsOfFile:filePath!)
         let value:String = plist?.objectForKey(keyname) as! String
-        println("Fetched Google Maps Key")
         return value
     }
 

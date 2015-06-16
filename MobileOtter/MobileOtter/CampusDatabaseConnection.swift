@@ -56,7 +56,8 @@ class CampusDatabaseConnection {
                             let lotNumber = (item["lot"] as! String).toInt()!
                             let parkingLong = (item["longitude"] as! NSString).doubleValue
                             let parkingLat = (item["latitude"] as! NSString).doubleValue
-                            self.parking.append(Parking(name: lotNumber, long: parkingLong, lat: parkingLat, description: ""))
+                            let instructions = (item["instructions"] as! String)
+                            self.parking.append(Parking(name: lotNumber, long: parkingLong, lat: parkingLat, description: instructions))
                         }
                     }
                 }
